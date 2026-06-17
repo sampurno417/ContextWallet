@@ -1,0 +1,252 @@
+{
+"id": "com.sampurno.contextwallet",
+"version": "1.0.7",
+"name": "ContextWallet",
+"description": "AI + Genie + Dashboard Context Management Widget for SAP Analytics Cloud",
+"newInstancePrefix": "ContextWallet",
+"vendor": "linkedin.com/in/sampurnosarkar",
+"eula": "Sampurno Sarkar",
+"license": "MIT",
+"icon": "https://cdn.jsdelivr.net/gh/sampurno417/ContextWallet@main/icon.png",
+
+"webcomponents": [
+  {
+    "kind": "main",
+    "tag": "com-sampurno-contextwallet",
+   "url": "https://cdn.jsdelivr.net/gh/sampurno417/ContextWallet@1.2.0/ContextWallet.bundle.js",
+    "integrity": "",
+    "ignoreIntegrity": true
+  }
+],
+
+"imports": [
+"datasource"
+],
+
+"properties": {},
+
+"methods": {
+
+
+"setContext": {
+  "description": "Store complete context object",
+  "parameters": [
+    {
+      "name": "context",
+      "type": "Selection"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"getContext": {
+  "description": "Get complete context object",
+  "returnType": "Selection"
+},
+"setWorkspace": {
+  "description": "Sets active workspace",
+  "parameters": [
+    {
+      "name": "workspaceName",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"getWorkspace": {
+  "description": "Returns current workspace",
+  "returnType": "string"
+},
+
+"clearContext": {
+  "description": "Clear current context",
+  "returnType": "boolean"
+},
+
+"mergeContext": {
+  "description": "Merge values into existing context",
+  "parameters": [
+    {
+      "name": "context",
+      "type": "Selection"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"addContextField": {
+  "description": "Add or update field",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string"
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"removeContextField": {
+  "description": "Remove field from context",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"hasContextField": {
+  "description": "Checks if a context field exists",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"getContextKeys": {
+  "description": "Returns all context field names",
+  "returnType": "string[]"
+},
+
+"saveSnapshot": {
+  "description": "Save current context as snapshot",
+  "parameters": [
+    {
+      "name": "snapshotName",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"loadSnapshot": {
+  "description": "Loads a snapshot into current context",
+  "parameters": [
+    {
+      "name": "snapshotName",
+      "type": "string"
+    }
+  ],
+  "returnType": "Selection"
+},
+
+"getSnapshots": {
+  "description": "Returns all snapshot names",
+  "returnType": "string[]"
+},
+
+"getSnapshot": {
+  "description": "Returns a specific snapshot",
+  "parameters": [
+    {
+      "name": "snapshotName",
+      "type": "string"
+    }
+  ],
+  "returnType": "Selection"
+},
+
+"getContextValue": {
+  "description": "Returns value of a context field",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string"
+    }
+  ],
+  "returnType": "string"
+},
+
+"deleteSnapshot": {
+  "description": "Deletes a snapshot",
+  "parameters": [
+    {
+      "name": "snapshotName",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"exportContextAsJSON": {
+  "description": "Export context as JSON string",
+  "returnType": "string"
+},
+
+"exportContext": {
+  "description": "Exports context as JSON string",
+  "returnType": "string"
+},
+
+"importContext": {
+  "description": "Imports context from JSON string",
+  "parameters": [
+    {
+      "name": "jsonString",
+      "type": "string"
+    }
+  ],
+  "returnType": "boolean"
+},
+
+"buildPrompt": {
+  "description": "Build AI prompt using context",
+  "parameters": [
+    {
+      "name": "question",
+      "type": "string"
+    }
+  ],
+  "returnType": "string"
+},
+
+"getAIPayload": {
+  "description": "Returns AI payload containing question and context",
+  "parameters": [
+    {
+      "name": "question",
+      "type": "string"
+    }
+  ],
+  "returnType": "Selection"
+}
+
+,
+
+"buildContextSummary": {
+  "description": "Builds a human readable context summary",
+  "returnType": "string"
+},
+
+"getContextHistory": {
+  "description": "Returns context history",
+  "returnType": "Selection"
+},
+
+"clearContextHistory": {
+  "description": "Clears context history",
+  "returnType": "boolean"
+},
+
+"getSessionInfo": {
+  "description": "Returns session information",
+  "returnType": "Selection"
+}
+
+},
+
+"events": {
+"onContextChanged": {
+"description": "Triggered whenever context changes"
+}
+}
+}
