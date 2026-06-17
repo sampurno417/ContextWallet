@@ -15,7 +15,7 @@
     "tag": "com-sampurno-contextwallet",
    "url": "https://cdn.jsdelivr.net/gh/sampurno417/ContextWallet@1.2.0/ContextWallet.bundle.js",
     "integrity": "sha384-PmgoVBy9vAr4PAQG3qimRqrJ3YJpuQb+0apgKLRZK1O26L4y8rv5dw7LAmh6bYz9",
-    "ignoreIntegrity": true
+    "ignoreIntegrity": false
   }
 ],
 
